@@ -1,0 +1,8 @@
+E:\Development\ACHIM\ACHIM.Helper\bin\Debug\ACHIM.Helper.dll
+E:\Development\ACHIM\ACHIM.Helper\bin\Debug\ACHIM.Helper.pdb
+E:\Development\ACHIM\ACHIM.Helper\bin\Debug\RaspberryPiDotNet.dll
+E:\Development\ACHIM\ACHIM.Helper\bin\Debug\RaspberryPiDotNet.pdb
+E:\Development\ACHIM\ACHIM.Helper\bin\Debug\RaspberryPiDotNet.xml
+E:\Development\ACHIM\ACHIM.Helper\obj\Debug\ACHIM.Helper.csprojResolveAssemblyReference.cache
+E:\Development\ACHIM\ACHIM.Helper\obj\Debug\ACHIM.Helper.dll
+E:\Development\ACHIM\ACHIM.Helper\obj\Debug\ACHIM.Helper.pdb

@@ -1,0 +1,9 @@
+E:\Development\ACHIM\ACHIM.StopSwitch.Test\obj\Debug\.NETFramework,Version=v4.5.AssemblyAttribute.cs
+E:\Development\ACHIM\ACHIM.StopSwitch.Test\bin\Debug\ACHIM.StopSwitch.Test.exe.config
+E:\Development\ACHIM\ACHIM.StopSwitch.Test\bin\Debug\ACHIM.StopSwitch.Test.exe.mdb
+E:\Development\ACHIM\ACHIM.StopSwitch.Test\bin\Debug\ACHIM.StopSwitch.Test.exe
+E:\Development\ACHIM\ACHIM.StopSwitch.Test\bin\Debug\RaspberryPiDotNet.dll
+E:\Development\ACHIM\ACHIM.StopSwitch.Test\bin\Debug\ACHIM.Helper.dll
+E:\Development\ACHIM\ACHIM.StopSwitch.Test\bin\Debug\ACHIM.Helper.dll.mdb
+E:\Development\ACHIM\ACHIM.StopSwitch.Test\obj\Debug\ACHIM.StopSwitch.Test.exe
+E:\Development\ACHIM\ACHIM.StopSwitch.Test\obj\Debug\ACHIM.StopSwitch.Test.exe.mdb

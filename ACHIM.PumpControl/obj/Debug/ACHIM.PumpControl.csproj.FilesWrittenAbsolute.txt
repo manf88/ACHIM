@@ -1,0 +1,17 @@
+Z:\ACHIM\ACHIM.PumpControl\obj\Debug\.NETFramework,Version=v4.5.AssemblyAttribute.cs
+Z:\ACHIM\ACHIM.PumpControl\bin\Debug\RaspberryPiDotNet.dll
+Z:\ACHIM\ACHIM.PumpControl\bin\Debug\ACHIM.Helper.dll
+Z:\ACHIM\ACHIM.PumpControl\bin\Debug\ACHIM.Helper.dll.mdb
+Z:\ACHIM\ACHIM.PumpControl\bin\Debug\ACHIM.PumpControl.dll.mdb
+Z:\ACHIM\ACHIM.PumpControl\bin\Debug\ACHIM.PumpControl.dll
+Z:\ACHIM\ACHIM.PumpControl\obj\Debug\ACHIM.PumpControl.dll
+Z:\ACHIM\ACHIM.PumpControl\obj\Debug\ACHIM.PumpControl.dll.mdb
+E:\Development\ACHIM\ACHIM.PumpControl\obj\Debug\.NETFramework,Version=v4.5.AssemblyAttribute.cs
+E:\Development\ACHIM\ACHIM.PumpControl\obj\Debug\ACHIM.PumpControl.dll
+E:\Development\ACHIM\ACHIM.PumpControl\obj\Debug\ACHIM.PumpControl.dll.mdb
+E:\Development\ACHIM\ACHIM.PumpControl\bin\Debug\ACHIM.PumpControl.dll.mdb
+E:\Development\ACHIM\ACHIM.PumpControl\bin\Debug\ACHIM.PumpControl.dll
+E:\Development\ACHIM\ACHIM.PumpControl\bin\Debug\RaspberryPiDotNet.dll
+E:\Development\ACHIM\ACHIM.PumpControl\bin\Debug\ACHIM.Helper.dll
+E:\Development\ACHIM\ACHIM.PumpControl\bin\Debug\ACHIM.Helper.dll.mdb
+E:\Development\ACHIM\ACHIM.PumpControl\bin\Debug\libbcm2835.so

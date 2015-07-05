@@ -1,0 +1,11 @@
+E:\Development\ACHIM\ACHIM.PumpControl\bin\Debug\libbcm2835.so
+E:\Development\ACHIM\ACHIM.PumpControl\bin\Debug\ACHIM.PumpControl.dll
+E:\Development\ACHIM\ACHIM.PumpControl\bin\Debug\ACHIM.PumpControl.pdb
+E:\Development\ACHIM\ACHIM.PumpControl\bin\Debug\ACHIM.Helper.dll
+E:\Development\ACHIM\ACHIM.PumpControl\bin\Debug\RaspberryPiDotNet.dll
+E:\Development\ACHIM\ACHIM.PumpControl\bin\Debug\ACHIM.Helper.pdb
+E:\Development\ACHIM\ACHIM.PumpControl\bin\Debug\RaspberryPiDotNet.pdb
+E:\Development\ACHIM\ACHIM.PumpControl\bin\Debug\RaspberryPiDotNet.xml
+E:\Development\ACHIM\ACHIM.PumpControl\obj\Debug\ACHIM.PumpControl.csprojResolveAssemblyReference.cache
+E:\Development\ACHIM\ACHIM.PumpControl\obj\Debug\ACHIM.PumpControl.dll
+E:\Development\ACHIM\ACHIM.PumpControl\obj\Debug\ACHIM.PumpControl.pdb
