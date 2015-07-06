@@ -3,7 +3,7 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 2012
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ACHIM.Logic", "ACHIM.Logic\ACHIM.Logic.csproj", "{DB1545E6-9115-46D7-8C69-B52C7F417C5F}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ACHIM.MotorControl", "ACHIM.MotorControl\ACHIM.MotorControl.csproj", "{F72AC708-649C-4292-A9AB-012FFEEDC15E}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ACHIM.Positioning", "ACHIM.MotorControl\ACHIM.Positioning.csproj", "{F72AC708-649C-4292-A9AB-012FFEEDC15E}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ACHIM.PumpControl", "ACHIM.PumpControl\ACHIM.PumpControl.csproj", "{C49F91F2-D919-470F-8F96-33C477221460}"
 EndProject
@@ -12,6 +12,8 @@ EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Test Projects", "Test Projects", "{D287A8A9-8D72-4E42-B572-07F0AE2F38FB}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ACHIM.StopSwitch.Test", "ACHIM.StopSwitch.Test\ACHIM.StopSwitch.Test.csproj", "{49CF2F8A-5D79-492A-8BAC-9EDA6BE9B407}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ACHIM.SoilSensor.Test", "ACHIM.SoilSensor.Test\ACHIM.SoilSensor.Test.csproj", "{B95354F0-297B-4627-8D94-1E14C6F2D1A7}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -39,11 +41,16 @@ Global
 		{49CF2F8A-5D79-492A-8BAC-9EDA6BE9B407}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{49CF2F8A-5D79-492A-8BAC-9EDA6BE9B407}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{49CF2F8A-5D79-492A-8BAC-9EDA6BE9B407}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B95354F0-297B-4627-8D94-1E14C6F2D1A7}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B95354F0-297B-4627-8D94-1E14C6F2D1A7}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B95354F0-297B-4627-8D94-1E14C6F2D1A7}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B95354F0-297B-4627-8D94-1E14C6F2D1A7}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
 	EndGlobalSection
 	GlobalSection(NestedProjects) = preSolution
 		{49CF2F8A-5D79-492A-8BAC-9EDA6BE9B407} = {D287A8A9-8D72-4E42-B572-07F0AE2F38FB}
+		{B95354F0-297B-4627-8D94-1E14C6F2D1A7} = {D287A8A9-8D72-4E42-B572-07F0AE2F38FB}
 	EndGlobalSection
 EndGlobal

@@ -15,3 +15,7 @@ E:\Development\ACHIM\ACHIM.PumpControl\bin\Debug\RaspberryPiDotNet.dll
 E:\Development\ACHIM\ACHIM.PumpControl\bin\Debug\ACHIM.Helper.dll
 E:\Development\ACHIM\ACHIM.PumpControl\bin\Debug\ACHIM.Helper.dll.mdb
 E:\Development\ACHIM\ACHIM.PumpControl\bin\Debug\libbcm2835.so
+E:\Development\ACHIM\ACHIM.PumpControl\bin\Debug\Raspberry.IO.dll
+E:\Development\ACHIM\ACHIM.PumpControl\bin\Debug\Raspberry.IO.GeneralPurpose.dll
+E:\Development\ACHIM\ACHIM.PumpControl\bin\Debug\Raspberry.IO.Interop.dll
+E:\Development\ACHIM\ACHIM.PumpControl\bin\Debug\Raspberry.System.dll

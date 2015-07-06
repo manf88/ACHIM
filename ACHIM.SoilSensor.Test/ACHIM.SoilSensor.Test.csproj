@@ -4,11 +4,11 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{DB1545E6-9115-46D7-8C69-B52C7F417C5F}</ProjectGuid>
+    <ProjectGuid>{B95354F0-297B-4627-8D94-1E14C6F2D1A7}</ProjectGuid>
     <OutputType>Exe</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>ACHIM.Logic</RootNamespace>
-    <AssemblyName>ACHIM.Logic</AssemblyName>
+    <RootNamespace>ACHIM.SoilSensor.Test</RootNamespace>
+    <AssemblyName>ACHIM.SoilSensor.Test</AssemblyName>
     <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
   </PropertyGroup>
@@ -32,10 +32,6 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="Ninject, Version=2.3.0.0, Culture=neutral, PublicKeyToken=c7192dc5380945e7, processorArchitecture=MSIL">
-      <HintPath>..\packages\Ninject.Mono.3.0.1.13\lib\net40\Ninject.dll</HintPath>
-      <Private>True</Private>
-    </Reference>
     <Reference Include="Raspberry.IO">
       <HintPath>..\..\raspberry-sharp-io\Raspberry.IO.GeneralPurpose\bin\Debug\Raspberry.IO.dll</HintPath>
     </Reference>
@@ -57,26 +53,11 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="IoCBindings\Bindings.cs" />
-    <Compile Include="PlantManager.cs" />
-    <Compile Include="Plants\IPlant.cs" />
-    <Compile Include="Plants\Plant.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
-    <None Include="packages.config" />
-  </ItemGroup>
-  <ItemGroup>
-    <ProjectReference Include="..\ACHIM.MotorControl\ACHIM.Positioning.csproj">
-      <Project>{f72ac708-649c-4292-a9ab-012ffeedc15e}</Project>
-      <Name>ACHIM.Positioning</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\ACHIM.PumpControl\ACHIM.PumpControl.csproj">
-      <Project>{c49f91f2-d919-470f-8f96-33c477221460}</Project>
-      <Name>ACHIM.PumpControl</Name>
-    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

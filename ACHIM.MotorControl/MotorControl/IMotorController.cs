@@ -1,18 +1,19 @@
-﻿using System;
+﻿using Raspberry.IO.GeneralPurpose;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace ACHIM.MotorControl
+namespace ACHIM.Positioning.MotorControl
 {
     public interface IMotorController
     {
-        int PIN1 { get; set; }
+        ConnectorPin Pin1 { get; set; }
 
-        int PIN2 { get; set; }
+        ConnectorPin Pin2 { get; set; }
 
-        void setPins();
+        void Initialize();
 
         void Start(Direction direction);
 

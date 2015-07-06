@@ -7,7 +7,7 @@
     <ProjectGuid>{F72AC708-649C-4292-A9AB-012FFEEDC15E}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>ACHIM.MotorControl</RootNamespace>
+    <RootNamespace>ACHIM.Positioning</RootNamespace>
     <AssemblyName>ACHIM.MotorControl</AssemblyName>
     <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
@@ -30,8 +30,17 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="RaspberryPiDotNet">
-      <HintPath>..\..\RaspberryPi.Net-master\RaspberryPiDotNet\bin\Release\RaspberryPiDotNet.dll</HintPath>
+    <Reference Include="Raspberry.IO">
+      <HintPath>..\..\raspberry-sharp-io\Raspberry.IO.GeneralPurpose\bin\Debug\Raspberry.IO.dll</HintPath>
+    </Reference>
+    <Reference Include="Raspberry.IO.GeneralPurpose">
+      <HintPath>..\..\raspberry-sharp-io\Raspberry.IO.GeneralPurpose\bin\Debug\Raspberry.IO.GeneralPurpose.dll</HintPath>
+    </Reference>
+    <Reference Include="Raspberry.IO.Interop">
+      <HintPath>..\..\raspberry-sharp-io\Raspberry.IO.GeneralPurpose\bin\Debug\Raspberry.IO.Interop.dll</HintPath>
+    </Reference>
+    <Reference Include="Raspberry.System">
+      <HintPath>..\..\raspberry-sharp-io\Raspberry.IO.GeneralPurpose\bin\Debug\Raspberry.System.dll</HintPath>
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
@@ -42,9 +51,11 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="MotorController.cs" />
-    <Compile Include="IMotorController.cs" />
+    <Compile Include="MotorControl\MotorController.cs" />
+    <Compile Include="MotorControl\IMotorController.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="StopSwitches\IStopSwitch.cs" />
+    <Compile Include="StopSwitches\StopSwitch.cs" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\ACHIM.Helper\ACHIM.Helper.csproj">

@@ -1,5 +1,4 @@
-﻿using ACHIM.Helper;
-using RaspberryPiDotNet;
+﻿using Raspberry.IO.GeneralPurpose;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -10,7 +9,7 @@ namespace ACHIM.PumpControl
 {
     public class PumpController : IPumpController
     {
-        private GPIOMem _gpio;
+        private ConnectorPin _gpio;
 
         public int RPiPin
         {
@@ -20,17 +19,17 @@ namespace ACHIM.PumpControl
 
         public void Start()
         {
-            _gpio.Write(false);
+            //_gpio.Write(false);
         }
 
         public void Stop()
         {
-            _gpio.Write(true);
+            //_gpio.Write(true);
         }
 
         public void SetPin()
         {
-            _gpio = new GPIOMem(PinConverter.getPin(RPiPin));
+            //_gpio = new GPIOMem(PinConverter.getPin(RPiPin));
         }
     }
 }

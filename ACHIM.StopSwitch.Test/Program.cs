@@ -1,10 +1,11 @@
-﻿using RaspberryPiDotNet;
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading;
 using System.Threading.Tasks;
+using Raspberry.IO.GeneralPurpose;
+
 
 namespace ACHIM.StopSwitch.Test
 {
@@ -12,17 +13,22 @@ namespace ACHIM.StopSwitch.Test
     {
         private static void Main(string[] args)
         {
-            GPIOMem switch1 = new GPIOMem(ACHIM.Helper.PinConverter.getPin(8));
-            GPIOMem switch2 = new GPIOMem(ACHIM.Helper.PinConverter.getPin(10));
-            GPIOMem switch3 = new GPIOMem(ACHIM.Helper.PinConverter.getPin(12));
-            GPIOMem switch4 = new GPIOMem(ACHIM.Helper.PinConverter.getPin(16));
-            GPIOMem switch5 = new GPIOMem(ACHIM.Helper.PinConverter.getPin(18));
+            var pin1 = ConnectorPin.P1Pin08.Input().OnStatusChanged(p => 
+                {
+                    Console.WriteLine("hans turned {0}", p ? "on" : "off");
+                });
+            var switch2 = ConnectorPin.P1Pin10.Input();
+            var switch3 = ConnectorPin.P1Pin12.Input();
+            var switch4 = ConnectorPin.P1Pin16.Input();
+            var switch5 = ConnectorPin.P1Pin18.Input();
 
-            while (true)
+            var switch1 = new GpioConnection(pin1);
+
+
+            using (var hans = new GpioConnection())
             {
-                Console.WriteLine(switch1.Read() + " | " + switch2.Read() + " | " + switch3.Read() + " | " + switch4.Read() + " | " + switch5.Read() + " | ");
-
-                Thread.Sleep(1000);
+                hans.Add(pin1);
+                Console.ReadKey(true);
             }
         }
     }

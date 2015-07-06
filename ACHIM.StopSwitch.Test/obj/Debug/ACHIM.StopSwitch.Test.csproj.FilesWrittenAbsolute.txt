@@ -7,3 +7,8 @@ E:\Development\ACHIM\ACHIM.StopSwitch.Test\bin\Debug\ACHIM.Helper.dll
 E:\Development\ACHIM\ACHIM.StopSwitch.Test\bin\Debug\ACHIM.Helper.dll.mdb
 E:\Development\ACHIM\ACHIM.StopSwitch.Test\obj\Debug\ACHIM.StopSwitch.Test.exe
 E:\Development\ACHIM\ACHIM.StopSwitch.Test\obj\Debug\ACHIM.StopSwitch.Test.exe.mdb
+E:\Development\ACHIM\ACHIM.StopSwitch.Test\bin\Debug\Raspberry.IO.dll
+E:\Development\ACHIM\ACHIM.StopSwitch.Test\bin\Debug\Raspberry.IO.GeneralPurpose.dll
+E:\Development\ACHIM\ACHIM.StopSwitch.Test\bin\Debug\Raspberry.IO.Interop.dll
+E:\Development\ACHIM\ACHIM.StopSwitch.Test\bin\Debug\Raspberry.System.dll
+E:\Development\ACHIM\ACHIM.StopSwitch.Test\bin\Debug\RaspberryPiDotNet.xml
