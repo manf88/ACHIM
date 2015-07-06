@@ -1,4 +1,4 @@
 **/bin/
 **/obj/
-!**/Debug/**/*.xml
-ACHIM.Logic/bin/Debug/*.mdb
+**/obj/Debug/
+**/bin/Debug/

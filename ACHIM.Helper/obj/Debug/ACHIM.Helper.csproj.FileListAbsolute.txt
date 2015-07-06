@@ -1,5 +1,0 @@
-E:\Development\ACHIM\ACHIM.Helper\bin\Debug\ACHIM.Helper.dll
-E:\Development\ACHIM\ACHIM.Helper\bin\Debug\ACHIM.Helper.pdb
-E:\Development\ACHIM\ACHIM.Helper\obj\Debug\ACHIM.Helper.dll
-E:\Development\ACHIM\ACHIM.Helper\obj\Debug\ACHIM.Helper.pdb
-E:\Development\ACHIM\ACHIM.Helper\obj\Debug\ACHIM.Helper.csprojResolveAssemblyReference.cache
