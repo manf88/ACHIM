@@ -2,3 +2,6 @@
 **/obj/
 **/obj/Debug/
 **/bin/Debug/
+/Shared/Ninject/extensions/CommonServiceLocator.NinjectAdapter.dll.mdb
+/Shared/Ninject/LICENSE.txt
+/Shared/Ninject/Ninject.dll.mdb

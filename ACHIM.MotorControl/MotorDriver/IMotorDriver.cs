@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace ACHIM.Positioning.MotorControl
 {
-    public interface IMotorController
+    public interface IMotorDriver
     {
         ConnectorPin Pin1 { get; set; }
 

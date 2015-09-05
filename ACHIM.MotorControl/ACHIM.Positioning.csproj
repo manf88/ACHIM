@@ -51,8 +51,10 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="MotorControl\MotorController.cs" />
-    <Compile Include="MotorControl\IMotorController.cs" />
+    <Compile Include="IMotorController.cs" />
+    <Compile Include="MotorController.cs" />
+    <Compile Include="MotorDriver\MotorDriver.cs" />
+    <Compile Include="MotorDriver\IMotorDriver.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="StopSwitches\IStopSwitch.cs" />
     <Compile Include="StopSwitches\StopSwitch.cs" />

@@ -2,7 +2,6 @@
 using ACHIM.Positioning.MotorControl;
 using ACHIM.Positioning;
 using ACHIM.PumpControl;
-using Ninject;
 using System;
 using System.Reflection;
 using System.Threading;

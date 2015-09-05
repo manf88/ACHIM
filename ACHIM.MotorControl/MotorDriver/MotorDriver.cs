@@ -10,7 +10,7 @@ namespace ACHIM.Positioning.MotorControl
 {
     public enum Direction { LEFT, RIGHT }
 
-    public class MotorController : IMotorController
+    public class MotorDriver : IMotorDriver
     {
         private PinConfiguration _pinConfig1;
         private PinConfiguration _pinConfig2;
@@ -19,7 +19,7 @@ namespace ACHIM.Positioning.MotorControl
 
         private GpioConnection _connection;
 
-        public MotorController()
+        public MotorDriver()
         {
         }
 
@@ -50,9 +50,11 @@ namespace ACHIM.Positioning.MotorControl
             {
                 case Direction.LEFT:
                     _settings.Driver.Write(_pinConfig1.Pin, false);
+                    _settings.Driver.Write(_pinConfig2.Pin, true);
                     break;
 
                 case Direction.RIGHT:
+                    _settings.Driver.Write(_pinConfig1.Pin, true);
                     _settings.Driver.Write(_pinConfig2.Pin, false);
                     break;
 
@@ -63,22 +65,8 @@ namespace ACHIM.Positioning.MotorControl
 
         public void Start(Direction direction, int time)
         {
-            switch (direction)
-            {
-                case Direction.LEFT:
-                    _settings.Driver.Write(_pinConfig1.Pin, false);
-                    Thread.Sleep(time);
-                    break;
-
-                case Direction.RIGHT:
-                    _settings.Driver.Write(_pinConfig2.Pin, false);
-                    Thread.Sleep(time);
-                    break;
-
-                default:
-                    break;
-            }
-
+            Start(direction);
+            Thread.Sleep(time);
             Stop();
         }
 

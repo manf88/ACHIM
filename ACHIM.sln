@@ -15,6 +15,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ACHIM.StopSwitch.Test", "AC
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ACHIM.SoilSensor.Test", "ACHIM.SoilSensor.Test\ACHIM.SoilSensor.Test.csproj", "{B95354F0-297B-4627-8D94-1E14C6F2D1A7}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ACHIM.MCP3008.Test", "ACHIM.MCP3008.Test\ACHIM.MCP3008.Test.csproj", "{E830393E-63BC-475A-9D21-8ED549BD2DAB}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -45,6 +47,10 @@ Global
 		{B95354F0-297B-4627-8D94-1E14C6F2D1A7}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{B95354F0-297B-4627-8D94-1E14C6F2D1A7}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{B95354F0-297B-4627-8D94-1E14C6F2D1A7}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E830393E-63BC-475A-9D21-8ED549BD2DAB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E830393E-63BC-475A-9D21-8ED549BD2DAB}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E830393E-63BC-475A-9D21-8ED549BD2DAB}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E830393E-63BC-475A-9D21-8ED549BD2DAB}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -52,5 +58,6 @@ Global
 	GlobalSection(NestedProjects) = preSolution
 		{49CF2F8A-5D79-492A-8BAC-9EDA6BE9B407} = {D287A8A9-8D72-4E42-B572-07F0AE2F38FB}
 		{B95354F0-297B-4627-8D94-1E14C6F2D1A7} = {D287A8A9-8D72-4E42-B572-07F0AE2F38FB}
+		{E830393E-63BC-475A-9D21-8ED549BD2DAB} = {D287A8A9-8D72-4E42-B572-07F0AE2F38FB}
 	EndGlobalSection
 EndGlobal

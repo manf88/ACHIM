@@ -18,7 +18,7 @@ namespace ACHIM.Logic
     {
         private IKernel _kernel;
 
-        private IMotorController _motor;
+        private IMotorController _motorControl;
 
         private IPumpController _pump;
 
@@ -77,13 +77,16 @@ namespace ACHIM.Logic
             switch1.Pin = ConnectorPin.P1Pin08;
             switch1.Number = 1;
             switch1.Initialize();
-            _switches.Add(switch1);
+            //_switches.Add(switch1);
+            _motorControl.RegisterSwitch(switch1);
 
             var switch2 = _kernel.Get<IStopSwitch>();
             switch2.Pin = ConnectorPin.P1Pin18;
             switch2.Number = 2;
             switch2.Initialize();
-            _switches.Add(switch2);
+            //_switches.Add(switch2);
+            _motorControl.RegisterSwitch(switch2);
+            
         }
 
         private void SetRelations()
@@ -100,10 +103,10 @@ namespace ACHIM.Logic
 
         private void InitMotorControl()
         {
-            _motor = _kernel.Get<IMotorController>();
-            _motor.Pin1 = ConnectorPin.P1Pin11;
-            _motor.Pin2 = ConnectorPin.P1Pin13;
-            _motor.Initialize();
+            _motorControl = _kernel.Get<IMotorController>();
+            _motorControl.MotorPin1 = ConnectorPin.P1Pin11;
+            _motorControl.MotorPin2 = ConnectorPin.P1Pin13;
+            _motorControl.Initialize();
         }
     }
 }

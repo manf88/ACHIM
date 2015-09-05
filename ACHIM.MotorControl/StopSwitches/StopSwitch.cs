@@ -21,6 +21,8 @@ namespace ACHIM.Positioning
 
         #region public members
 
+        public ConnectorPin Pin { get; set; }
+
         public int Number { get; set; }
 
         #endregion
@@ -41,20 +43,12 @@ namespace ACHIM.Positioning
             get { return _settings.Driver.Read(_pinConfiguration.Pin); }
         }
 
-        public ConnectorPin Pin { get; set; }
-
         public void Initialize()
         {
-            _pinConfiguration = Pin.Input().OnStatusChanged(s => {
+            _pinConfiguration = Pin.Input().Switch().OnStatusChanged(s => {
                 RaiseOnPressedEvent(null);  
             });
-
-            _settings = new GpioConnectionSettings()
-            {
-                Driver = new GpioConnectionDriver()
-            };
-            _connection = new GpioConnection(_settings);
-            _connection.Add(_pinConfiguration);
+            _connection = new GpioConnection(_pinConfiguration);
         }
     }
 }
