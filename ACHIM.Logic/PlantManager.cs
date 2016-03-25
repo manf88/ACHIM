@@ -61,7 +61,7 @@ namespace ACHIM.Logic
             Plants.Add(plant1);
 
             var plant2 = _kernel.Get<IPlant>();
-            plant2.Name = "Jalapeno";
+            plant2.Name = "Jalapeño";
             plant2.Number = 2;
             plant2.ProperSoilMoisture = 30;
             plant2.OnNeedWater += DoSomething;

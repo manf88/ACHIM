@@ -19,7 +19,7 @@ namespace ACHIM.Positioning
 
         #endregion
 
-        #region public members
+        #region properties
 
         public ConnectorPin Pin { get; set; }
 
@@ -45,7 +45,7 @@ namespace ACHIM.Positioning
 
         public void Initialize()
         {
-            _pinConfiguration = Pin.Input().Switch().OnStatusChanged(s => {
+            _pinConfiguration = Pin.Input().OnStatusChanged(s => {
                 RaiseOnPressedEvent(null);  
             });
             _connection = new GpioConnection(_pinConfiguration);

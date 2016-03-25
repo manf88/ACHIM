@@ -9,7 +9,7 @@ using System.Threading.Tasks;
 namespace ACHIM.Positioning.MotorControl
 {
     /// <summary>
-    /// The Motor Controller class has the pupose of driving the motor to the correct positions (plants).
+    /// The Motor Controller class has the purpose of driving the motor to the correct positions (plants).
     /// </summary>
     public class MotorController : IMotorController
     {
@@ -47,7 +47,7 @@ namespace ACHIM.Positioning.MotorControl
         {
             _currentDirection = Direction.RIGHT;
 
-            _motorDriver.Start(_currentDirection, 3000);
+            _motorDriver.Start(_currentDirection, 10000);
 
             _currentDirection = Direction.LEFT;
         }
@@ -85,9 +85,7 @@ namespace ACHIM.Positioning.MotorControl
         {
             GoToStart();
 
-            //_motorDriver.Start(Direction.RIGHT, 3000);
-
-            _motorDriver.Start(Direction.LEFT, 3000);
+            _motorDriver.Start(Direction.LEFT, 10000);
         }
 
         private void InitializeMotor()
