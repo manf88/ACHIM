@@ -63,9 +63,9 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\ACHIM.Helper\ACHIM.Helper.csproj">
+    <ProjectReference Include="..\ACHIM.Helper\ACHIM.ADConverter.csproj">
       <Project>{bce0c438-3af8-4eef-bf70-7bd339c314ad}</Project>
-      <Name>ACHIM.Helper</Name>
+      <Name>ACHIM.ADConverter</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

@@ -2,7 +2,7 @@
 using Raspberry.IO.GeneralPurpose;
 using System;
 
-namespace ACHIM.Helper
+namespace ACHIM.ADConverter
 {
     /// <summary>
     /// Wrapper class for the MCP3008 A/D converter.

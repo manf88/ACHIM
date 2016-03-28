@@ -7,8 +7,8 @@
     <ProjectGuid>{BCE0C438-3AF8-4EEF-BF70-7BD339C314AD}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>ACHIM.Helper</RootNamespace>
-    <AssemblyName>ACHIM.Helper</AssemblyName>
+    <RootNamespace>ACHIM.ADConverter</RootNamespace>
+    <AssemblyName>ACHIM.ADConverter</AssemblyName>
     <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
   </PropertyGroup>

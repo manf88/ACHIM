@@ -9,7 +9,7 @@ namespace ACHIM.MCP3008.Test
     {
         static void Main(string[] args)
         {
-            Helper.MCP3008 hans = new Helper.MCP3008();
+            ADConverter.MCP3008 hans = new ADConverter.MCP3008();
             hans.Initialize(
                 ConnectorPin.P1Pin12,
                 ConnectorPin.P1Pin16,

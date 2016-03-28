@@ -4,9 +4,7 @@ namespace ACHIM.PumpControl
 {
     public class PumpController : IPumpController
     {
-        private ConnectorPin _gpio;
-
-        public int RPiPin
+        public ConnectorPin RPiPin
         {
             get;
             set;
@@ -20,11 +18,6 @@ namespace ACHIM.PumpControl
         public void Stop()
         {
             //_gpio.Write(true);
-        }
-
-        public void SetPin()
-        {
-            //_gpio = new GPIOMem(PinConverter.getPin(RPiPin));
         }
     }
 }

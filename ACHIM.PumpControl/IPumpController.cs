@@ -1,16 +1,10 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using Raspberry.IO.GeneralPurpose;
 
 namespace ACHIM.PumpControl
 {
     public interface IPumpController
     {
-        int RPiPin { get; set; }
-
-        void SetPin();
+        ConnectorPin RPiPin { get; set; }
 
         void Start();
 
