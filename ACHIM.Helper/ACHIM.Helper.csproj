@@ -39,6 +39,12 @@
     <Reference Include="Raspberry.IO.GeneralPurpose">
       <HintPath>..\Shared\RaspberrySharpIO\Raspberry.IO.GeneralPurpose.dll</HintPath>
     </Reference>
+    <Reference Include="Raspberry.IO.Interop">
+      <HintPath>..\Shared\RaspberrySharpIO\Raspberry.IO.Interop.dll</HintPath>
+    </Reference>
+    <Reference Include="Raspberry.System">
+      <HintPath>..\Shared\RaspberrySharpIO\Raspberry.System.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="Microsoft.CSharp" />
   </ItemGroup>

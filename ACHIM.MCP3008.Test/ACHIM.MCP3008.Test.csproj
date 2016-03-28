@@ -32,20 +32,20 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="Raspberry.IO, Version=2.1.0.0, Culture=neutral, processorArchitecture=MSIL">
-      <SpecificVersion>False</SpecificVersion>
+    <Reference Include="Raspberry.IO">
       <HintPath>..\Shared\RaspberrySharpIO\Raspberry.IO.dll</HintPath>
     </Reference>
-    <Reference Include="Raspberry.IO.Components, Version=2.1.0.0, Culture=neutral, processorArchitecture=MSIL">
-      <SpecificVersion>False</SpecificVersion>
+    <Reference Include="Raspberry.IO.Components">
       <HintPath>..\Shared\RaspberrySharpIO\Raspberry.IO.Components.dll</HintPath>
     </Reference>
-    <Reference Include="Raspberry.IO.GeneralPurpose, Version=2.1.0.0, Culture=neutral, processorArchitecture=MSIL">
-      <SpecificVersion>False</SpecificVersion>
+    <Reference Include="Raspberry.IO.GeneralPurpose">
       <HintPath>..\Shared\RaspberrySharpIO\Raspberry.IO.GeneralPurpose.dll</HintPath>
     </Reference>
-    <Reference Include="RaspberryPiDotNet">
-      <HintPath>C:\Users\boehm\Documents\Visual Studio 2015\Projects\ACHIM.MCP3008.TestEnvironment\Lib\RaspberryPiDotNet.dll</HintPath>
+    <Reference Include="Raspberry.IO.Interop">
+      <HintPath>..\Shared\RaspberrySharpIO\Raspberry.IO.Interop.dll</HintPath>
+    </Reference>
+    <Reference Include="Raspberry.System">
+      <HintPath>..\Shared\RaspberrySharpIO\Raspberry.System.dll</HintPath>
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
