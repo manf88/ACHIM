@@ -1,12 +1,4 @@
-﻿using ACHIM.Logic.IoCBindings;
-using ACHIM.Positioning.MotorControl;
-using ACHIM.Positioning;
-using ACHIM.PumpControl;
-using System;
-using System.Reflection;
-using System.Threading;
-using System.Collections.Generic;
-using ACHIM.Logic.Plants;
+﻿using postgresModel;
 
 namespace ACHIM.Logic
 {
@@ -14,14 +6,16 @@ namespace ACHIM.Logic
     {
         private static void Main(string[] args)
         {
-            PlantManager manager = new PlantManager();
-
-            foreach (var plant in manager.Plants)
+            using (var model = new postgresEntities())
             {
-                plant.CheckSoilMoisture();
-            }
+                var hans = Plant.CreatePlant(0, "hans");
+                hans.PositionSwitch = PositionSwitch.CreatePositionSwitch(0, 1, 12);
+                model.PositionSwitches.AddObject(hans.PositionSwitch);
+                
+                model.Plants.AddObject(hans);
 
-            Console.Read();
+                model.SaveChanges();
+            }
         }
     }
 }

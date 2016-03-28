@@ -1,0 +1,277 @@
+﻿<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+  <!-- EF Runtime content -->
+  <edmx:Runtime>
+    <!-- SSDL content -->
+    <edmx:StorageModels>
+      <Schema Namespace="postgresModel.Store" Alias="Self" Provider="Npgsql" ProviderManifestToken="" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:devart="http://devart.com/schemas/edml/StorageSchemaExtensions/1.0" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+        <EntityContainer Name="postgresEntitiesStoreContainer">
+          <EntitySet Name="Plants" EntityType="postgresModel.Store.Plants" store:Type="Tables" Schema="public" Table="Plants" />
+          <EntitySet Name="Measurements" EntityType="postgresModel.Store.Measurements" store:Type="Tables" Schema="public" Table="Measurements" />
+          <EntitySet Name="Irrigations" EntityType="postgresModel.Store.Irrigations" store:Type="Tables" Schema="public" Table="Irrigations" />
+          <EntitySet Name="PositionSwitches" EntityType="postgresModel.Store.PositionSwitches" store:Type="Tables" Schema="public" Table="PositionSwitches" />
+          <EntitySet Name="Pumps" EntityType="postgresModel.Store.Pumps" store:Type="Tables" Schema="public" Table="Pumps" />
+          <AssociationSet Name="FK_Measurements_Plants" Association="postgresModel.Store.FK_Measurements_Plants">
+            <End Role="Plants" EntitySet="Plants" />
+            <End Role="Measurements" EntitySet="Measurements" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Irrigations_Plants" Association="postgresModel.Store.FK_Irrigations_Plants">
+            <End Role="Plants" EntitySet="Plants" />
+            <End Role="Irrigations" EntitySet="Irrigations" />
+          </AssociationSet>
+          <AssociationSet Name="FK_PositionSwitches_Plants" Association="postgresModel.Store.FK_PositionSwitches_Plants">
+            <End Role="Plants" EntitySet="Plants" />
+            <End Role="PositionSwitches" EntitySet="PositionSwitches" />
+          </AssociationSet>
+        </EntityContainer>
+        <EntityType Name="Plants">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="int4" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="Name" Type="varchar" Nullable="false" />
+        </EntityType>
+        <EntityType Name="Measurements">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="int4" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="Value" Type="float8" Nullable="false" />
+          <Property Name="Timestamp" Type="timestamp" />
+          <Property Name="PlantId" Type="int4" Nullable="false" />
+        </EntityType>
+        <EntityType Name="Irrigations">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="int4" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="Timestamp" Type="timestamp" />
+          <Property Name="PlantId" Type="int4" Nullable="false" />
+        </EntityType>
+        <EntityType Name="PositionSwitches">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="int4" Nullable="false" />
+          <Property Name="Number" Type="int4" Nullable="false" />
+          <Property Name="GPIO" Type="int4" Nullable="false" />
+        </EntityType>
+        <EntityType Name="Pumps">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="int4" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="GPIO" Type="int4" Nullable="false" />
+        </EntityType>
+        <Association Name="FK_Measurements_Plants">
+          <End Role="Plants" Type="postgresModel.Store.Plants" Multiplicity="1" />
+          <End Role="Measurements" Type="postgresModel.Store.Measurements" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Plants">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="Measurements">
+              <PropertyRef Name="PlantId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Irrigations_Plants">
+          <End Role="Plants" Type="postgresModel.Store.Plants" Multiplicity="1" />
+          <End Role="Irrigations" Type="postgresModel.Store.Irrigations" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Plants">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="Irrigations">
+              <PropertyRef Name="PlantId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_PositionSwitches_Plants">
+          <End Role="Plants" Type="postgresModel.Store.Plants" Multiplicity="1" />
+          <End Role="PositionSwitches" Type="postgresModel.Store.PositionSwitches" Multiplicity="0..1" />
+          <ReferentialConstraint>
+            <Principal Role="Plants">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="PositionSwitches">
+              <PropertyRef Name="Id" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+      </Schema>
+    </edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema Namespace="postgresModel" Alias="Self" d4p1:ViewGeneration="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:devart="http://devart.com/schemas/edml/ConceptualSchemaExtensions/1.0" xmlns:ed="http://devart.com/schemas/EntityDeveloper/1.0" annotation:UseStrongSpatialTypes="false" xmlns:d4p1="http://devart.com/schemas/edml/ConceptualSchemaExtensions/1.0" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+        <EntityContainer Name="postgresEntities" annotation:LazyLoadingEnabled="true" ed:Guid="27509ff3-cafd-4e08-922c-51db4150ebcf">
+          <EntitySet Name="Plants" EntityType="postgresModel.Plant" />
+          <EntitySet Name="Measurements" EntityType="postgresModel.Measurement" />
+          <EntitySet Name="Irrigations" EntityType="postgresModel.Irrigation" />
+          <EntitySet Name="PositionSwitches" EntityType="postgresModel.PositionSwitch" />
+          <EntitySet Name="Pumps" EntityType="postgresModel.Pump" />
+          <AssociationSet Name="Plant_MeasurementSet" Association="postgresModel.Plant_Measurement">
+            <End Role="Plant" EntitySet="Plants" />
+            <End Role="Measurements" EntitySet="Measurements" />
+          </AssociationSet>
+          <AssociationSet Name="Plant_IrrigationSet" Association="postgresModel.Plant_Irrigation">
+            <End Role="Plant" EntitySet="Plants" />
+            <End Role="Irrigations" EntitySet="Irrigations" />
+          </AssociationSet>
+          <AssociationSet Name="Plant_PositionSwitchSet" Association="postgresModel.Plant_PositionSwitch">
+            <End Role="Plant" EntitySet="Plants" />
+            <End Role="PositionSwitch" EntitySet="PositionSwitches" />
+          </AssociationSet>
+        </EntityContainer>
+        <EntityType Name="Plant" ed:Guid="b37574ea-7850-4006-8fd5-8d71d98d7623">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" ed:ValidateRequired="true" ed:Guid="c3c7110c-ed91-43e6-a280-b446945ca7c9" />
+          <Property Name="Name" Type="String" Nullable="false" ed:ValidateRequired="true" ed:Guid="39eff790-52a2-40e3-b2a0-a11f63d8b13a" />
+          <NavigationProperty Name="Measurements" Relationship="postgresModel.Plant_Measurement" FromRole="Plant" ToRole="Measurements" ed:Guid="18385b93-6040-47a2-aa1d-e6f4dc59f05f" />
+          <NavigationProperty Name="Irrigations" Relationship="postgresModel.Plant_Irrigation" FromRole="Plant" ToRole="Irrigations" ed:Guid="100d34bf-63f9-4771-bd56-d7a6a9ad7654" />
+          <NavigationProperty Name="PositionSwitch" Relationship="postgresModel.Plant_PositionSwitch" FromRole="Plant" ToRole="PositionSwitch" ed:Guid="b232042c-e398-4edb-a613-d26abce065e2" />
+        </EntityType>
+        <EntityType Name="Measurement" ed:Guid="3673d5a4-86f4-4169-9f76-00bb23baf966">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" ed:ValidateRequired="true" ed:Guid="b85eb352-bebd-474f-bc24-8f57cdeae819" />
+          <Property Name="Value" Type="Double" Nullable="false" ed:ValidateRequired="true" ed:Guid="7773425d-bd09-42d3-b3be-34cc5ccd696e" />
+          <Property Name="Timestamp" Type="DateTime" ed:ValidateRequired="false" ed:Guid="3a0fc97c-5d32-4756-bcb0-ec4f2e852cea" />
+          <Property Name="PlantId" Type="Int32" Nullable="false" ed:ValidateRequired="true" ed:Guid="f2902265-720c-4700-9eff-7bef65a10999" />
+          <NavigationProperty Name="Plant" Relationship="postgresModel.Plant_Measurement" FromRole="Measurements" ToRole="Plant" ed:Guid="9998fb1e-0b02-4d20-b550-c0a5a8387842" />
+        </EntityType>
+        <EntityType Name="Irrigation" ed:Guid="80b15058-a965-4af0-82d5-0c2af76abc8a">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" ed:ValidateRequired="true" ed:Guid="855e93b7-7be0-4c22-b7c8-d69c745857b6" />
+          <Property Name="Timestamp" Type="DateTime" ed:ValidateRequired="false" ed:Guid="7f35d6c4-d4b0-4766-9eb3-1054829c26e2" />
+          <Property Name="PlantId" Type="Int32" Nullable="false" ed:ValidateRequired="true" ed:Guid="f9597a2b-efe4-463c-bad3-edc7464c62e0" />
+          <NavigationProperty Name="Plant" Relationship="postgresModel.Plant_Irrigation" FromRole="Irrigations" ToRole="Plant" ed:Guid="813c05b4-6ade-45c8-b6a0-a42b12f4b382" />
+        </EntityType>
+        <EntityType Name="PositionSwitch" ed:Guid="1c33c1b3-d88a-46b2-917b-49dc3a73e3de">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Int32" Nullable="false" ed:ValidateRequired="true" ed:Guid="d32b96ad-9148-4784-b92d-1dcdd51865cc" />
+          <Property Name="Number" Type="Int32" Nullable="false" ed:ValidateRequired="true" ed:Guid="c957353d-229d-4608-a279-1dec94b4bc5c" />
+          <Property Name="GPIO" Type="Int32" Nullable="false" ed:ValidateRequired="true" ed:Guid="aae5ba9d-0ce2-4a8d-b239-9789532c4f0a" />
+        </EntityType>
+        <EntityType Name="Pump" ed:Guid="131b38b4-8f4c-4fba-a1fc-68ed479cfd0e">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" ed:ValidateRequired="true" ed:Guid="698ab752-3489-47ac-94bf-10ef01042db0" />
+          <Property Name="GPIO" Type="Int32" Nullable="false" ed:ValidateRequired="true" ed:Guid="20b4a229-dfe5-4a29-89f7-b2cba9864ae5" />
+        </EntityType>
+        <Association Name="Plant_Measurement" ed:Guid="a66ce224-0cdc-4d2c-9cc0-d9e2e8f53ece">
+          <End Role="Plant" Type="postgresModel.Plant" Multiplicity="1" />
+          <End Role="Measurements" Type="postgresModel.Measurement" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Plant">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="Measurements">
+              <PropertyRef Name="PlantId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="Plant_Irrigation" ed:Guid="221f7746-5c00-4634-a024-545850b84b50">
+          <End Role="Plant" Type="postgresModel.Plant" Multiplicity="1" />
+          <End Role="Irrigations" Type="postgresModel.Irrigation" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Plant">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="Irrigations">
+              <PropertyRef Name="PlantId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="Plant_PositionSwitch" ed:Guid="2e40c447-0d06-49b2-a5f0-eb0aee78eead">
+          <End Role="Plant" Type="postgresModel.Plant" Multiplicity="1" />
+          <End Role="PositionSwitch" Type="postgresModel.PositionSwitch" Multiplicity="0..1" />
+          <ReferentialConstraint>
+            <Principal Role="Plant">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="PositionSwitch">
+              <PropertyRef Name="Id" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+      </Schema>
+    </edmx:ConceptualModels>
+    <!-- MSL content -->
+    <edmx:Mappings>
+      <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+        <EntityContainerMapping StorageEntityContainer="postgresEntitiesStoreContainer" CdmEntityContainer="postgresEntities">
+          <EntitySetMapping Name="Plants">
+            <EntityTypeMapping TypeName="postgresModel.Plant">
+              <MappingFragment StoreEntitySet="Plants">
+                <ScalarProperty Name="Id" ColumnName="Id" />
+                <ScalarProperty Name="Name" ColumnName="Name" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Measurements">
+            <EntityTypeMapping TypeName="postgresModel.Measurement">
+              <MappingFragment StoreEntitySet="Measurements">
+                <ScalarProperty Name="Id" ColumnName="Id" />
+                <ScalarProperty Name="Value" ColumnName="Value" />
+                <ScalarProperty Name="Timestamp" ColumnName="Timestamp" />
+                <ScalarProperty Name="PlantId" ColumnName="PlantId" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Irrigations">
+            <EntityTypeMapping TypeName="postgresModel.Irrigation">
+              <MappingFragment StoreEntitySet="Irrigations">
+                <ScalarProperty Name="Id" ColumnName="Id" />
+                <ScalarProperty Name="Timestamp" ColumnName="Timestamp" />
+                <ScalarProperty Name="PlantId" ColumnName="PlantId" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="PositionSwitches">
+            <EntityTypeMapping TypeName="postgresModel.PositionSwitch">
+              <MappingFragment StoreEntitySet="PositionSwitches">
+                <ScalarProperty Name="Id" ColumnName="Id" />
+                <ScalarProperty Name="Number" ColumnName="Number" />
+                <ScalarProperty Name="GPIO" ColumnName="GPIO" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Pumps">
+            <EntityTypeMapping TypeName="postgresModel.Pump">
+              <MappingFragment StoreEntitySet="Pumps">
+                <ScalarProperty Name="Id" ColumnName="Id" />
+                <ScalarProperty Name="GPIO" ColumnName="GPIO" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+        </EntityContainerMapping>
+      </Mapping>
+    </edmx:Mappings>
+  </edmx:Runtime>
+  <!-- EF Designer content -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <edmx:Connection>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+      </DesignerInfoPropertySet>
+    </edmx:Connection>
+    <edmx:Options>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="ValidateOnBuild" Value="true" />
+        <DesignerProperty Name="EnablePluralization" Value="false" />
+        <DesignerProperty Name="IncludeForeignKeysInModel" Value="true" />
+      </DesignerInfoPropertySet>
+    </edmx:Options>
+    <edmx:Diagrams>
+      <Diagram Name="Main" />
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>
